@@ -36,22 +36,21 @@ namespace WeekFive
                 new List<int>{3, 5}
             };
             int daycount = 0;
-
-
             
             for (DateTime date = DateTime.Now; date <= end; date = date.AddDays(1.0))
             {
                 List<int> currentDay = new List<int> { date.Month, date.Day };
                
-                if( 
+                if ( 
                     workingSaturdays.Contains(currentDay) && 
                     !(holidays.Contains(currentDay))
-                  )
+                   )
                 {
                     daycount++;
                 }
 
-                if ((date.DayOfWeek != DayOfWeek.Saturday && date.DayOfWeek != DayOfWeek.Sunday) &&
+                if (
+                    (date.DayOfWeek != DayOfWeek.Saturday && date.DayOfWeek != DayOfWeek.Sunday) &&
                     !(holidays.Contains(currentDay))
                    )
                 {
@@ -118,7 +117,7 @@ namespace WeekFive
             //NumberFour();
             //NumberNine();
             //NumberTen();
-            NumberEleven();
+            //NumberEleven();
         }
     }
 }
